@@ -1,0 +1,9 @@
+
+ItemListContainer -> Tiene la promesa y los ítems,
+y guarda en el state los datos que "resuelve" la promesa para pasarlos mediante props a ItemList
+
+ItemList -> Hace un "map" de los ítems recibidos, 
+y por cada ítem muestra esa "card", pasando los detalles (nombre, precio, categoría, etc.) mediante props
+
+Ítem -> Simplemente recibe detalles del producto mediante props,
+y los muestra en pantalla
