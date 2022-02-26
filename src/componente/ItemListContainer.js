@@ -26,7 +26,7 @@ const ItemListContainer = () => {
 
     return (
         <div>
-            <div className="grid gap-x-8 gap-y-4 grid-cols-3 ">
+            <div className="grid gap-x-3 gap-y-4 grid-cols-3 ">
             {producto.map(c=><ItemList  product={c}/>)}
             </div>
         </div>
