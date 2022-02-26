@@ -1,11 +1,34 @@
-import React from 'react'
-import ItemList from './ItemList';
+import { useEffect, useState } from "react"
+import ItemList from "./ItemList"
 
 
 const ItemListContainer = () => {
+
+    const [producto,setProducto] = useState([])
+
+    useEffect(()=>{
+        getProducto()
+    },[])
+
+    const getProducto = ()=>{
+        const url = "datos.json"
+        fetch(url)
+             .then(res=>res.json())
+             .then(res =>{
+             setProducto(res.Productos)
+             })
+             .catch(error=>{
+              console.log(error)
+            
+          })
+    }
+  
+
     return (
-        <div className="mensaje">
-            <ItemList/>  
+        <div>
+            <div className="grid gap-x-8 gap-y-4 grid-cols-3 ">
+            {producto.map(c=><ItemList  product={c}/>)}
+            </div>
         </div>
     )
 }

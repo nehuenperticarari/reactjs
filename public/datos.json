@@ -1,0 +1,40 @@
+{
+    "Productos":[
+        {
+            "id":1,
+            "nombre":"Impresora 3D",
+            "precio":"$50000",
+            "imagen":"https://images.pexels.com/photos/4485456/pexels-photo-4485456.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+        },
+        {
+            "id":2,
+            "nombre":"Auricualres",
+            "precio":"$2000",
+            "imagen":"https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        },
+        {
+            "id":3,
+            "nombre":"Parlante",
+            "precio":"$2000",
+            "imagen":"https://images.pexels.com/photos/4790273/pexels-photo-4790273.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        },
+         {
+             "id":4,
+             "nombre":"Muñecos Mario",
+             "precio":"$500",
+             "imagen":"https://images.pexels.com/photos/163077/mario-yoschi-figures-funny-163077.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+         },
+         {
+             "id":5,
+             "nombre":"Control PS4",
+             "precio":"$10000",
+             "imagen":"https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+         },
+         {
+             "id":6,
+             "nombre":"XBOX one",
+             "precio":"$50000",
+             "imagen":"https://images.pexels.com/photos/5626726/pexels-photo-5626726.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+         }
+    ]
+}
