@@ -12,17 +12,20 @@ const ItemListContainer = () => {
 
     const getProducto = ()=>{
         const url = "datos.json"
-        fetch(url)
+            fetch(url)
              .then(res=>res.json())
              .then(res =>{
-             setProducto(res.Productos)
+                setTimeout(() => {
+                    setProducto(res.Productos)
+                }, 2000);
              })
              .catch(error=>{
               console.log(error)
-            
+
           })
     }
   
+   
 
     return (
         <div>
