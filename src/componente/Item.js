@@ -1,10 +1,10 @@
 import React from 'react'
 import ItemList from './ItemList'
 
-const Item = () => {
+const Item = ({product}) => {
   return (
     <div>
-      <ItemList/>
+      <ItemList key={product.id}/>
     </div>
   )
 }

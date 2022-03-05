@@ -25,12 +25,10 @@ const ItemListContainer = () => {
           })
     }
   
-   
-
     return (
         <div>
             <div className="grid gap-x-3 gap-y-4 grid-cols-3 ">
-            {producto.map(c=><ItemList  product={c}/>)}
+            {producto.map(c=><ItemList key={producto.id} product={c}/>)}
             </div>
         </div>
     )

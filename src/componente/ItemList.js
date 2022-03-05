@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom"
+
 
 
 function ItemList({product}) {
@@ -7,10 +9,11 @@ function ItemList({product}) {
       <img className="w-full h-full object-cover rounded-t" src={product.imagen} alt={product.nombre}></img>
     </div>
     <div className="w-full h-1/4 p-3">
-      <a href="#" className=" hover:text-gray-400 text-gray-700">
+      <NavLink to={`/productos/${product.id}`} className=" hover:text-gray-400 text-gray-700">
         <span className="text-lg font-semibold uppercase tracking-wide ">{product.nombre}</span>
-      </a>
+      </NavLink>
       <p className="text-gray-600 text-sm leading-5 mt-1">{product.precio}</p>
+      
     </div>
  
   </div>  
