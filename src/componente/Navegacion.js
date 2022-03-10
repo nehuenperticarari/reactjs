@@ -29,7 +29,7 @@ export default class Navegacion extends Component {
               <NavLink to='/home' className="mr-5 hover:text-gray-900">Home</NavLink>
               <NavLink to='/categoria/xbox' className="mr-5 hover:text-gray-900">Xbox</NavLink>
               <NavLink to='/categoria/playstation' className="mr-5 hover:text-gray-900">Playstation</NavLink>
-              <NavLink to='/nosotros' className="mr-5 hover:text-gray-900">Nosotros</NavLink>
+              <NavLink to='/contacto' className="mr-5 hover:text-gray-900">Contacto</NavLink>
 
             </nav>
               <button onClick={click} className="inline-flex items-center

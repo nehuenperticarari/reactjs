@@ -35,11 +35,11 @@ const ItemListContainer = () => {
     },[category])
 
   return (
-   
-        <div className="grid gap-x-8 gap-y-4 grid-cols-3 ">
-            {producto.length && producto.map(product=><div 
-            key={product.id}><ItemList product={product}/></div>)}
-        </div>  
+  <div> 
+    <div className="grid gap-x-8 gap-y-4 grid-cols-3 ">
+    {producto.length && producto.map(product=><div 
+    key={product.id}><ItemList product={product}/></div>)}</div>
+  </div>
   )
 }
 export default ItemListContainer

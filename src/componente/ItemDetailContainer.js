@@ -9,8 +9,6 @@ function ItemDetailContainer() {
   const {id} = useParams()
 
   useEffect(()=>{
-    
-      
     getProductoDetail(id)
   },[id])
 
@@ -30,15 +28,13 @@ function ItemDetailContainer() {
               })
               .catch(error=>{
                 console.warn(error)
-  }) 
-              
+  })           
 }
+
   return (
     <div>
       <div className="grid gap-x-3 gap-y-4 grid-cols-3 ">
-      <ItemDetail key={producto.id} product={producto}/>
-      </div>
-  
+      <ItemDetail key={producto.id} product={producto}/></div>
     </div>
   )
 } 

@@ -4,7 +4,7 @@ import ItemListContainer from './componente/ItemListContainer';
 import FooterWeb from './componente/FooterWeb'
 import ItemDetailContainer from './componente/ItemDetailContainer';
 import Home from './pages/Home'
-import Nosotros from './pages/Nosotros'
+import Contacto from './pages/Contacto'
 
 
 
@@ -18,7 +18,7 @@ function App() {
           <Route path="/home" index element={<Home/>}/> 
           <Route path="/categoria/:category" element={<ItemListContainer/>}/>
           <Route path="/productos/:id" element={<ItemDetailContainer/>}/>
-          <Route path="/nosotros" element={<Nosotros/>}/>
+          <Route path="/contacto" element={<Contacto/>}/>
           
         </Routes>
       </BrowserRouter>
