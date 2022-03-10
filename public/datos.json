@@ -1,45 +1,45 @@
 {
-    "Productos":[
+    "productos":[
         {
             "id":1,
-            "nombre":"Impresora 3D",
-            "precio":"$50000",
-            "Categoria":"Playstation",
-            "imagen":"https://images.pexels.com/photos/4485456/pexels-photo-4485456.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+            "nombre":"Control PS4",
+            "precio":"$5000",
+            "categoria":"playstation",
+            "imagen":"https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
         },
         {
             "id":2,
-            "nombre":"Auricualres",
-            "precio":"$2000",
-            "Categoria":"Playstation",
-            "imagen":"https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            "nombre":"Playstation retro",
+            "precio":"$20000",
+            "categoria":"playstation",
+            "imagen":"https://images.pexels.com/photos/4219883/pexels-photo-4219883.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
         },
         {
             "id":3,
-            "nombre":"Parlante",
-            "precio":"$2000",
-            "Categoria":"Playstation",
-            "imagen":"https://images.pexels.com/photos/4790273/pexels-photo-4790273.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            "nombre":"Playstation portable",
+            "precio":"$25000",
+            "categoria":"playstation",
+            "imagen":"https://images.pexels.com/photos/1435595/pexels-photo-1435595.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
         },
          {
              "id":4,
-             "nombre":"Muñecos Mario",
-             "precio":"$500",
-             "Categoria":"Xbox",
-             "imagen":"https://images.pexels.com/photos/163077/mario-yoschi-figures-funny-163077.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+             "nombre":"Control Xbox pro",
+             "precio":"$50000",
+             "categoria":"xbox",
+             "imagen":"https://images.pexels.com/photos/2106216/pexels-photo-2106216.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
          },
          {
              "id":5,
-             "nombre":"Control PS4",
-             "precio":"$10000",
-             "Categoria":"Xbox",
-             "imagen":"https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+             "nombre":"Xbox serie x",
+             "precio":"$100000",
+             "categoria":"xbox",
+             "imagen":"https://images.pexels.com/photos/4491606/pexels-photo-4491606.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
          },
          {
              "id":6,
              "nombre":"XBOX one",
              "precio":"$50000",
-             "Categoria":"Xbox",
+             "categoria":"xbox",
              "imagen":"https://images.pexels.com/photos/5626726/pexels-photo-5626726.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
          }
     ]

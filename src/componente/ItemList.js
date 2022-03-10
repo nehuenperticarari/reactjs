@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom"
 
 
-
 function ItemList({product}) {
   return (
     <div className="  bg-white w-30 h-96 shadow-md rounded m-2">

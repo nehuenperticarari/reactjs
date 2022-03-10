@@ -17,29 +17,26 @@ function ItemDetailContainer() {
 
   const getProductoDetail = (id)=>{
             
-              const url = "datos.json"
+              const url = "https://run.mocky.io/v3/3790c9bb-9647-4696-904f-7a0640dbfb08"
 
               fetch(url)
               .then(res => res.json())
               .then(res =>{
+                const item = res.find( x => x.id == id)
+                setTimeout(() => {
+                  setProducto(item);
+                }, 2000);
                 
-                setProducto(res[id]);
               })
               .catch(error=>{
                 console.warn(error)
   }) 
               
-
-
-
-
-              
-
 }
   return (
     <div>
       <div className="grid gap-x-3 gap-y-4 grid-cols-3 ">
-      <ItemDetail product={producto}/>
+      <ItemDetail key={producto.id} product={producto}/>
       </div>
   
     </div>

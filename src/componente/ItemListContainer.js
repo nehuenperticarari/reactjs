@@ -1,37 +1,45 @@
 import { useEffect, useState } from "react"
-import ItemList from "./ItemList"
+import { useParams } from "react-router-dom"
+import ItemList from "../componente/ItemList";
 
 
 const ItemListContainer = () => {
 
-    const [producto,setProducto] = useState([])
+  const [producto,setProducto] = useState([])
+  const {category}= useParams();
+  console.log(category);
 
-    useEffect(()=>{
-        getProducto()
+  const getProducto = async()=>{
+    try{
+        const url = "https://run.mocky.io/v3/3790c9bb-9647-4696-904f-7a0640dbfb08"
+        const res = await fetch(url);
+        const data = await res.json();
+        console.log(data)
+        if(category){
+          const results = data.filter (productos => productos.categoria === category)
+          console.log(results)
+          setProducto(results)
+        }
+        else{
+            setProducto(data)
+        }
+    }
+    catch(error){
+      console.log(error)
+
+    }
+  }
+
+  useEffect(()=>{
+      getProducto()
     },[])
 
-    const getProducto = ()=>{
-        const url = "datos.json"
-            fetch(url)
-             .then(res=>res.json())
-             .then(res =>{
-                setTimeout(() => {
-                    setProducto(res.Productos)
-                }, 2000);
-             })
-             .catch(error=>{
-              console.log(error)
-
-          })
-    }
-  
-    return (
-        <div>
-            <div className="grid gap-x-3 gap-y-4 grid-cols-3 ">
-            {producto.map(c=><ItemList key={producto.id} product={c}/>)}
-            </div>
-        </div>
-    )
+  return (
+   
+        <div className="grid gap-x-8 gap-y-4 grid-cols-3 ">
+            {producto.length && producto.map(product=><div 
+            key={product.id}><ItemList product={product}/></div>)}
+        </div>  
+  )
 }
-
-export default ItemListContainer;
+export default ItemListContainer

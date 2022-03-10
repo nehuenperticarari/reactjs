@@ -13,7 +13,7 @@ function ItemDetail({product}) {
         <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">{product.nombre}</h1>
         <div className="flex mb-4">
       </div>
-      <p className="leading-relaxed">{product.Categoria}</p>
+      <p className="leading-relaxed">Descripcion producto</p>
       <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
         <div className="flex ml-6 items-center">
           <span className="mr-3">{product.precio}</span>
