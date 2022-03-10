@@ -16,7 +16,6 @@ function App() {
         <Navegacion/>
         <Routes>
           <Route path="/home" index element={<Home/>}/> 
-          <Route path="/categoria" element={<ItemListContainer/>}/>
           <Route path="/categoria/:category" element={<ItemListContainer/>}/>
           <Route path="/productos/:id" element={<ItemDetailContainer/>}/>
           <Route path="/nosotros" element={<Nosotros/>}/>
