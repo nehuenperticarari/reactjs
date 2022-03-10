@@ -49,7 +49,7 @@ const Contacto = () => {
                   <p className="text-lg font-bold text-white">Cordoba, Argentibna</p>
                   <p className="text-lg font-bold text-white">Av Colon, 5000</p>
                 </div>
-                <p className="text-gray-400">The one est bad, semper six. At sem quis, congue</p>
+                <p className="text-gray-400">Somos mejor que nuestra competencia</p>
               </div>
             </div>
           </div>

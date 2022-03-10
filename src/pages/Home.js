@@ -14,7 +14,7 @@ const Home = () => {
           </p>
         </div>
         <div className="md:w-1/2 mt-8 md:mt-0 flex justify-center md:justify-end">
-          <img src="https://images.pexels.com/photos/9100862/pexels-photo-9100862.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+          <img src="https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
         </div>
       </div>
       <div className="md:w-4/12 lg:w-5/12 xl:w-4/12 2xl:w-3/12 bg-gray-50 py-6 px-6 md:py-0 md:px-4 lg:px-6 flex flex-col justify-center relative">
