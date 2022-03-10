@@ -22,7 +22,7 @@ function ItemDetailContainer() {
               fetch(url)
               .then(res => res.json())
               .then(res =>{
-                const item = res.find( x => x.id == id)
+                const item = res.find( x => x.id = id)
                 setTimeout(() => {
                   setProducto(item);
                 }, 2000);

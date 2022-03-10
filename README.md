@@ -1,0 +1,1 @@
+Aplicacion web el vikingo, es una pagina e-commerce facil de usar y intuitiva para el usuario, tendra de 4 pages navegables, de las cuales la primera sera home y se mostrara un banner de la empresa, otras 2 pages seran para mostrar los productos de le empresa, y el ultimo sera para poner informacion de la empresa ya sea de contacto y/o telefonos.
