@@ -32,7 +32,7 @@ const ItemListContainer = () => {
 
   useEffect(()=>{
     setTimeout(() => {getProducto()}, 2000);
-    },[])
+    },[category])
 
   return (
    
