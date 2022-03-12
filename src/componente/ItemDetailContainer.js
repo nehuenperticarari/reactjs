@@ -10,7 +10,7 @@ function ItemDetailContainer() {
 
   useEffect(()=>{
     getProductoDetail(id)
-  },[id])
+  },[])
 
 
   const getProductoDetail = (id)=>{
@@ -20,7 +20,7 @@ function ItemDetailContainer() {
               fetch(url)
               .then(res => res.json())
               .then(res =>{
-                const item = res.find( x => x.id = id)
+                const item = res.find( x => x.id == id)
                 setTimeout(() => {
                   setProducto(item);
                 }, 2000);
@@ -33,7 +33,7 @@ function ItemDetailContainer() {
 
   return (
     <div>
-      <div className="grid gap-x-3 gap-y-4 grid-cols-3 ">
+      <div>
       <ItemDetail key={producto.id} product={producto}/></div>
     </div>
   )

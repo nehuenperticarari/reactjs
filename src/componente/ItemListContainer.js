@@ -11,7 +11,7 @@ const ItemListContainer = () => {
 
   const getProducto = async()=>{
     try{
-        const url = "https://run.mocky.io/v3/3790c9bb-9647-4696-904f-7a0640dbfb08"
+        const url = "https://run.mocky.io/v3/6886150c-697b-45f2-96dd-039b41a01ee6"
         const res = await fetch(url);
         const data = await res.json();
         console.log(data)
