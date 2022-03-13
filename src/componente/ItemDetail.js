@@ -6,12 +6,12 @@ import ItemCount from './ItemCount'
 
 function ItemDetail({product}) {
   
-  const {addproduct,clearCart} = useContext(CartContext)
+  const {addProducto,clearCart} = useContext(CartContext)
 
   const [isInCart, setisInCart] = useState(false)
 
   function addToCart(qty){
-    addproduct(product,qty)
+    addProducto(product,qty)
     setisInCart(true)
 
   }

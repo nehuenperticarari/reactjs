@@ -15,6 +15,7 @@ export function CartContextProvider({children})  {
 
   } 
 
+
   function addProducto (product, qty) {
     if (isProductoInCart(product.id)){
       let index = productoCart.findIndex(i=>i.id === product.id)
@@ -23,7 +24,7 @@ export function CartContextProvider({children})  {
       setProducto(copyCart);
     }
     else{
-      const productoToAdd = {... product, qty}
+      const productoToAdd = {...product, qty}
       setProducto([...productoCart, productoToAdd])
     }
     }
