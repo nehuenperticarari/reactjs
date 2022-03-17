@@ -5,7 +5,8 @@ import FooterWeb from './componente/FooterWeb'
 import ItemDetailContainer from './componente/ItemDetailContainer';
 import Home from './pages/Home'
 import Contacto from './pages/Contacto'
-import { CartContextProvider } from './componente/CartContext';
+import { CartContextProvider } from './context/CartContext';
+import Cart from './componente/Cart';
 
 
 
@@ -17,11 +18,11 @@ function App() {
       <BrowserRouter>
         <Navegacion/>
         <Routes>
-          <Route path="/home" index element={<Home/>}/> 
+          <Route path="/" index element={<Home/>}/> 
           <Route path="/categoria/:category" element={<ItemListContainer/>}/>
           <Route path="/productos/:id" element={<ItemDetailContainer/>}/>
           <Route path="/contacto" element={<Contacto/>}/>
-          <Route path="/cart"></Route>
+          <Route path="/cart" element={<Cart/>}></Route>
         </Routes>
       </BrowserRouter>
       <FooterWeb/>

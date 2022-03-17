@@ -2,10 +2,12 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from "react"
 import ItemDetail from './ItemDetail'
+import Loading from "../componente/Loading"
 
 
 function ItemDetailContainer() {
   const [producto,setProducto] = useState([])
+  const [loading, setLoading] = useState(true)
   const {id} = useParams()
 
   useEffect(()=>{
@@ -22,7 +24,7 @@ function ItemDetailContainer() {
               .then(res =>{
                 const item = res.find( x => x.id == id)
                 setTimeout(() => {
-                  setProducto(item);
+                  setProducto(item);setLoading(false)
                 }, 2000);
                 
               })
@@ -33,8 +35,8 @@ function ItemDetailContainer() {
 
   return (
     <div>
-      <div>
-      <ItemDetail key={producto.id} product={producto}/></div>
+      { loading ? <Loading /> : null }
+      <ItemDetail key={producto.id} product={producto}/>
     </div>
   )
 } 

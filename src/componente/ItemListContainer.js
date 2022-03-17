@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import ItemList from "../componente/ItemList";
+import Loading from "../componente/Loading"
 
 
 const ItemListContainer = () => {
 
   const [producto,setProducto] = useState([])
+  const [loading, setLoading] = useState(true)
   const {category}= useParams();
   console.log(category);
 
@@ -18,7 +20,11 @@ const ItemListContainer = () => {
         if(category){
           const results = data.filter (productos => productos.categoria === category)
           console.log(results)
-          setProducto(results)
+          setTimeout(() => {
+            setProducto(results);setLoading(false)
+          }, 2000);
+          
+          
         }
         else{
             setProducto(data)
@@ -30,16 +36,20 @@ const ItemListContainer = () => {
     }
   }
 
-  useEffect(()=>{
-    setTimeout(() => {getProducto()}, 2000);
-    },[category])
+  useEffect(()=>{ getProducto() },[category])
+    
 
   return (
-  <div> 
-    <div className="grid gap-x-8 gap-y-4 grid-cols-3 ">
-    {producto.length && producto.map(product=><div 
-    key={product.id}><ItemList product={product}/></div>)}</div>
-  </div>
+    <div>
+      
+      <div className="grid gap-x-8 gap-y-4 grid-cols-3 ">
+        {producto.length && producto.map(product=><div 
+        key={product.id}><ItemList product={product}/></div>)}
+      </div>
+      { loading ? <Loading /> : null }
+    </div>
+     
+
   )
 }
 export default ItemListContainer

@@ -15,7 +15,6 @@ export function CartContextProvider({children})  {
 
   } 
 
-
   function addProducto (product, qty) {
     if (isProductoInCart(product.id)){
       let index = productoCart.findIndex(i=>i.id === product.id)
@@ -39,7 +38,6 @@ export function CartContextProvider({children})  {
     setProducto([])
   }
     
-
 
   return (
     <CartContext.Provider value={{addProducto, productoCart, clearCart, removeProducto}}>
