@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import ItemList from "../componente/ItemList";
 import Loading from "../componente/Loading"
+import {GetProducts} from '../firebase/FireBase'
 
 
 const ItemListContainer = () => {
@@ -9,17 +10,17 @@ const ItemListContainer = () => {
   const [producto,setProducto] = useState([])
   const [loading, setLoading] = useState(true)
   const {category}= useParams();
-  console.log(category);
+  
 
   const getProducto = async()=>{
     try{
-        const url = "https://run.mocky.io/v3/6886150c-697b-45f2-96dd-039b41a01ee6"
+        const url = "https://run.mocky.io/v3/3d0cc2b1-3a62-4ff3-9fce-9764965b8eeb"
         const res = await fetch(url);
         const data = await res.json();
-        console.log(data)
+        
         if(category){
           const results = data.filter (productos => productos.categoria === category)
-          console.log(results)
+          
           setTimeout(() => {
             setProducto(results);setLoading(false)
           }, 2000);
@@ -36,7 +37,18 @@ const ItemListContainer = () => {
     }
   }
 
-  useEffect(()=>{ getProducto() },[category])
+  useEffect(()=>{ 
+    GetProducts().then(data => {
+      if(category){
+        const results = data.filter (productos => productos.categoria === category)
+        setTimeout(() => {
+          setProducto(results);setLoading(false)
+        }, 2000);}
+      else{
+        setProducto(data)
+    }
+    })
+  }, [category])
     
 
   return (
@@ -44,7 +56,7 @@ const ItemListContainer = () => {
       
       <div className="grid gap-x-8 gap-y-4 grid-cols-3 ">
         {producto.length && producto.map(product=><div 
-        key={product.id}><ItemList product={product}/></div>)}
+        key={product.nombre}><ItemList product={product}/></div>)}
       </div>
       { loading ? <Loading /> : null }
     </div>

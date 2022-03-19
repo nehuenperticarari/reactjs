@@ -6,7 +6,7 @@ import ItemCount from './ItemCount'
 
 function ItemDetail({product}) {
   
-  const {addProducto,clearCart} = useContext(CartContext)
+  const {addProducto} = useContext(CartContext)
 
   const [isInCart, setisInCart] = useState(false)
 
@@ -26,7 +26,7 @@ function ItemDetail({product}) {
         <div className="flex mb-4">
       </div>
       <div>
-        <p className="xl:pr-48 text-base font-black text-center  lg:leading-tight leading-normal text-gray-600 mt-7">{product.precio}</p>
+        <p className="xl:pr-48 text-base font-black text-center  lg:leading-tight leading-normal text-gray-600 mt-7">${product.precio}</p>
         <p className="text-base leading-4 mt-7 text-gray-600">Aca deberia ir texto</p>
         <p className="text-base leading-4 mt-4 text-gray-600">Aca deberia ir texto</p>
         <p className="text-base leading-4 mt-4 text-gray-600">Aca deberia ir texto</p>
@@ -50,8 +50,7 @@ function ItemDetail({product}) {
         :
           <ItemCount addToCart={addToCart} stock={product.stock}/>
         }   
-          <button onClick={clearCart} className="flex ml-auto text-white bg-indigo-500 border-0 py-2 
-          text-lg px-6 focus:outline-none hover:bg-indigo-600 rounded">Vaciar carrito</button>
+          
       </div>
       </div>
       </div>

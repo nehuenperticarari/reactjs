@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
+import React, {  useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import logo from "../assets/imagenes/logo.jpg"
+import CartContext from '../context/CartContext'
 import CartWidget from "./CartWidget.js"
 
 
-
-export default class Navegacion extends Component {
-  render() {
-    return (
-      <div className='head'>
+const Navegacion = () => {
+  const { productoCart } = useContext(CartContext)
+  return (
+    <div className='head'>
         <header style={{backgroundColor: "rgb(95, 121, 143)"}} className="text-white body-font" >
           <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <NavLink to='/' className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
@@ -23,6 +23,7 @@ export default class Navegacion extends Component {
               <NavLink to='/contacto' className="mr-5 hover:text-gray-900">Contacto</NavLink>
 
             </nav>
+            {productoCart.length  > 0 ?
             <NavLink  to="/cart">
               <button className="inline-flex items-center
               bg-gray-400 border-2  py-1 px-3 focus:outline-none hover:bg-gray-500 rounded-lg text-base mt-4 md:mt-0">Carrito
@@ -32,11 +33,14 @@ export default class Navegacion extends Component {
                 <CartWidget/>
               </button>
             </NavLink >
-              
+              :
+              <></>
+            }
           </div>
         </header>
 
       </div>
-    )
-  }
+  )
 }
+
+export default Navegacion
