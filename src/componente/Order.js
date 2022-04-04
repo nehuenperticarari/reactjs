@@ -50,6 +50,7 @@ const Order = () => {
     <div className='p-32'>
     <p className='font-sans text-4xl'>Introduzca sus datos</p>
     <p className='font-sans text-4xl'>para finalizar la compra</p>
+    <p className='font-sans text-4xl'>El monto total de la compra es $ {totalCart}</p>
     <form className="w-full max-w-sm" onSubmit={handlerEnvio}>
       <div className="flex items-center border-b border-cyan-500 py-2">
         <input onChange={handler} id='nombre' name='nombre' className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Nombre" aria-label="Full name"/>
