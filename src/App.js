@@ -6,7 +6,8 @@ import ItemDetailContainer from './componente/ItemDetailContainer';
 import Home from './pages/Home'
 import Contacto from './pages/Contacto'
 import { CartContextProvider } from './context/CartContext';
-import Cart from './componente/Cart';
+import CartView  from './componente/CartView';
+import Order from './componente/Order'
 
 
 
@@ -22,7 +23,8 @@ function App() {
           <Route path="/categoria/:category" element={<ItemListContainer/>}/>
           <Route path="/productos/:nombre" element={<ItemDetailContainer/>}/>
           <Route path="/contacto" element={<Contacto/>}/>
-          <Route path="/cart" element={<Cart/>}></Route>
+          <Route path="/cart" element={<CartView />}></Route>
+          <Route path="/comprar" element={<Order/>}></Route>
         </Routes>
       </BrowserRouter>
       <FooterWeb/>

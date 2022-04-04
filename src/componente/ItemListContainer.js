@@ -56,7 +56,7 @@ const ItemListContainer = () => {
       
       <div className="grid gap-x-8 gap-y-4 grid-cols-3 ">
         {producto.length && producto.map(product=><div 
-        key={product.nombre}><ItemList product={product}/></div>)}
+        key={product.id}><ItemList product={product}/></div>)}
       </div>
       { loading ? <Loading /> : null }
     </div>

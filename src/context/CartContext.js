@@ -3,11 +3,10 @@ import React, { createContext, useState } from 'react'
 const CartContext = createContext();
 
 
-export function CartContextProvider({children})  {
+export function CartContextProvider({children},product)  {
   const [productoCart, setProducto] = useState([]);
   const [totalCart, setTotalCart] = useState(0)
   
-  console.log(totalCart)
 
   function addProducto (product, qty) {
     if (isProductoInCart(product.id)){
@@ -26,13 +25,12 @@ export function CartContextProvider({children})  {
     }
     }
 
-  const removeProducto = ( id, product) => {
+  const removeProducto = (id) => {
+    let index = productoCart.findIndex(el => el.id === id);
     const copyCart = [...productoCart];
-    let index = copyCart.findIndex(el => el.id === id);
     copyCart.splice( index, 1 );
     setProducto([...copyCart]);
     setTotalCart(totalCart - (product.precio * product.qty))
-    
     
 }
   

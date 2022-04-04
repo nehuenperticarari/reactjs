@@ -24,7 +24,7 @@ function ItemDetailContainer() {
   return (
     <div>
       { loading ? <Loading /> : null }
-      <ItemDetail  key={producto.nombre} product={producto}/>
+      <ItemDetail  key={producto.id} product={producto}/>
     </div>
   )
 } 

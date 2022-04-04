@@ -1,4 +1,3 @@
-
 import { initializeApp } from "firebase/app";
 /* import { getAnalytics } from "firebase/analytics"; */
 import {getFirestore , collection, getDocs} from "firebase/firestore"
@@ -14,8 +13,9 @@ const firebaseConfig = {
 };
 
 export const app = initializeApp(firebaseConfig);
-const db = getFirestore()
-const productsCollection = collection(db, "products")
+export const db = getFirestore()
+export const orderCollection = collection(db, 'orders')
+
 
 export const GetProducts = async () => {
     
@@ -23,8 +23,11 @@ export const GetProducts = async () => {
   let listadeProductos = []
 
   querySnapshot.forEach(doc => {
-      console.log(doc.data());
-      listadeProductos.push(doc.data())
+    
+     
+      listadeProductos.push({
+        id: doc.id,
+        ...doc.data()})
   })
   
   return listadeProductos
